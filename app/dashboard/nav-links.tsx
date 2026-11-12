@@ -25,17 +25,18 @@ export default function NavLinks() {
     <>
       {links.map((link) => {
         const LinkIcon = link.icon;
+        const isActive = pathname === link.href;
         return (
           <Link
             key={link.name}
             href={link.href}
-            className={`flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3 ${
-              pathname === link.href
-                ? 'bg-sky-100 text-blue-600'
-                : 'bg-gray-50 text-gray-900'
+            className={`flex h-[48px] grow items-center justify-center gap-2 rounded-xl p-3 text-sm font-medium backdrop-blur-md transition-all duration-200 md:flex-none md:justify-start md:p-2 md:px-3 active:scale-95 ${
+              isActive
+                ? 'bg-blue-500/15 text-blue-600 border border-blue-400/30 shadow-sm font-semibold'
+                : 'bg-white/60 text-gray-700 border border-white/60 hover:bg-white/90 hover:text-blue-600 hover:border-white/80 shadow-sm'
             }`}
           >
-            <LinkIcon className="w-6" />
+            <LinkIcon className="w-6 shrink-0" />
             <p className="hidden md:block">{link.name}</p>
           </Link>
         );

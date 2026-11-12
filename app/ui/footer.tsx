@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mt-auto w-full border-t border-gray-200 bg-white py-6">
+    <footer className="mt-auto w-full border-t border-white/50 bg-white/60 backdrop-blur-xl py-6 shadow-sm">
       <div className="mx-auto max-w-7xl px-6 text-center">
         <p className="text-sm text-gray-600">
           Web ini dikerjakan oleh{' '}
