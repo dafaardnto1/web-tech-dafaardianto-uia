@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { inter } from '@/app/ui/fonts';
+import PageTransition from '@/app/ui/page-transition';
 
 export const metadata: Metadata = {
   title: 'Web Teknologi - UIA',
@@ -26,7 +27,9 @@ export default function RootLayout({
           <div className="absolute top-1/3 -left-40 h-[600px] w-[600px] rounded-full bg-indigo-300/20 blur-3xl" />
           <div className="absolute -bottom-40 right-1/4 h-[500px] w-[500px] rounded-full bg-sky-300/20 blur-3xl" />
         </div>
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   );
