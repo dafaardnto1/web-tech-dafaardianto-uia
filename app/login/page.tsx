@@ -2,6 +2,7 @@
 
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   AtSymbolIcon,
   KeyIcon,
@@ -22,7 +23,11 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
       {/* iOS Glass Banner */}
-      <div className="flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-600/90 via-blue-500/85 to-sky-500/80 backdrop-blur-xl border border-white/30 shadow-xl shadow-blue-500/15 p-4 md:h-52 md:items-end">
+      <Link
+        href="/"
+        title="Kembali ke Beranda"
+        className="flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-600/90 via-blue-500/85 to-sky-500/80 backdrop-blur-xl border border-white/30 shadow-xl shadow-blue-500/15 p-4 md:h-52 md:items-end transition-all duration-200 hover:shadow-blue-500/25 active:scale-[0.99] cursor-pointer"
+      >
         <Image
           src="/logo/uialogo.png"
           width={500}
@@ -31,7 +36,7 @@ export default function Page() {
           alt="Banner UIA"
           priority
         />
-      </div>
+      </Link>
 
       {/* iOS Glass Login Card */}
       <div className="flex flex-col justify-center gap-6 rounded-3xl bg-white/75 backdrop-blur-2xl border border-white/60 shadow-2xl shadow-slate-200/50 px-6 py-10 md:w-2/5 md:px-16 m-auto mt-6 transition-all duration-300">
