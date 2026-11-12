@@ -2,6 +2,7 @@
   <img src="./public/logo/uialogo.png" alt="Logo Universitas Islam As-Syafi'iyah" width="330" />
   <h1>Web Teknologi · UIA</h1>
   <p>Dashboard pembelajaran dengan alur autentikasi dari antarmuka hingga database.</p>
+  <p>Project Ini Dalam Tahap Pengembangan.</p>
   <p>
     <img alt="Dibuat oleh Dafa Ardianto" src="https://img.shields.io/badge/Dibuat_oleh-Dafa_Ardianto-173B66?style=for-the-badge">
     <img alt="NIM 3420230004" src="https://img.shields.io/badge/NIM-3420230004-2563EB?style=for-the-badge">
