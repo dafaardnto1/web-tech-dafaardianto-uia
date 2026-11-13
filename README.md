@@ -7,6 +7,7 @@
     <img alt="Dibuat oleh Dafa Ardianto" src="https://img.shields.io/badge/Dibuat_oleh-Dafa_Ardianto-173B66?style=for-the-badge">
     <img alt="NIM 3420230004" src="https://img.shields.io/badge/NIM-3420230004-2563EB?style=for-the-badge">
     <img alt="Teknik Informatika, UIA" src="https://img.shields.io/badge/Teknik_Informatika-UIA-0F9D8A?style=for-the-badge">
+    <img alt="Jumlah Tayangan" src="https://komarev.com/ghpvc/?username=dafaardnto1-web-teknologi-uia&label=Jumlah+Tayangan&color=1E40AF&style=for-the-badge">
   </p>
   <p>
     <a href="#alur-aplikasi">Jelajahi alur</a> ·
