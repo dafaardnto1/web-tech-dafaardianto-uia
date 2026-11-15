@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import NavLinks from '@/app/dashboard/nav-links';
-import { PowerIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import { signOut } from '@/auth';
+import SignOutButton from '@/app/ui/sign-out-button';
 
 export default function SideNav() {
   return (
@@ -25,17 +24,7 @@ export default function SideNav() {
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
         <NavLinks />
         <div className="hidden h-auto w-full grow rounded-2xl bg-white/35 backdrop-blur-md border border-white/40 md:block"></div>
-        <form
-          action={async () => {
-            'use server';
-            await signOut({ redirectTo: '/login' });
-          }}
-        >
-          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-xl bg-white/60 backdrop-blur-md border border-white/60 p-3 text-sm font-medium text-gray-700 hover:bg-red-50/80 hover:text-red-600 hover:border-red-200/60 shadow-sm md:flex-none md:justify-start md:p-2 md:px-3 active:scale-95 transition-all duration-200">
-            <PowerIcon className="w-6 shrink-0" />
-            <div className="hidden md:block">Keluar</div>
-          </button>
-        </form>
+        <SignOutButton />
       </div>
     </div>
   );
