@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { PowerIcon } from '@heroicons/react/24/outline';
+import { useRouter } from 'next/navigation';
 import { signOut } from 'next-auth/react';
 
 export default function SignOutButton() {
+  const router = useRouter();
   const [isSigningOut, setIsSigningOut] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -13,7 +15,8 @@ export default function SignOutButton() {
     setHasError(false);
 
     try {
-      await signOut({ redirectTo: '/login' });
+      await signOut({ redirect: false, redirectTo: '/login' });
+      router.replace('/login');
     } catch (error) {
       console.error('Failed to sign out:', error);
       setIsSigningOut(false);
