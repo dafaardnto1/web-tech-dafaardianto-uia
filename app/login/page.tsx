@@ -5,16 +5,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   AtSymbolIcon,
+  EyeIcon,
+  EyeSlashIcon,
   KeyIcon,
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from '@/app/ui/button';
-import { useActionState } from 'react';
+import { useActionState, useState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 import Footer from '@/app/ui/footer';
 
 export default function Page() {
+  const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
     undefined,
@@ -75,15 +78,28 @@ export default function Page() {
                   </label>
                   <div className="relative">
                     <input
-                      className="peer block w-full rounded-xl border border-gray-200/80 py-[10px] pl-10 text-sm outline-none text-gray-900 placeholder:text-gray-400 bg-white/70 backdrop-blur-md focus:bg-white focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/15 shadow-sm transition-all"
+                      className="peer block w-full rounded-xl border border-gray-200/80 py-[10px] pl-10 pr-12 text-sm outline-none text-gray-900 placeholder:text-gray-400 bg-white/70 backdrop-blur-md focus:bg-white focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/15 shadow-sm transition-all"
                       id="password"
-                      type="password"
+                      type={showPassword ? 'text' : 'password'}
                       name="password"
                       placeholder="Ketikkan Kata Sandi"
                       required
                       minLength={6}
                     />
                     <KeyIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-400 peer-focus:text-blue-600 transition-colors" />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword((isVisible) => !isVisible)}
+                      aria-label={showPassword ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi'}
+                      aria-pressed={showPassword}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1 text-gray-400 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    >
+                      {showPassword ? (
+                        <EyeSlashIcon aria-hidden="true" className="h-[18px] w-[18px]" />
+                      ) : (
+                        <EyeIcon aria-hidden="true" className="h-[18px] w-[18px]" />
+                      )}
+                    </button>
                   </div>
                 </div>
               </div>
