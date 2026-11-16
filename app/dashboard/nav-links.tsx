@@ -30,13 +30,14 @@ export default function NavLinks() {
           <Link
             key={link.name}
             href={link.href}
-            className={`flex h-[48px] grow items-center justify-center gap-2 rounded-xl p-3 text-sm font-medium backdrop-blur-md transition-all duration-200 md:flex-none md:justify-start md:p-2 md:px-3 active:scale-95 ${
+            aria-current={isActive ? 'page' : undefined}
+            className={`flex h-[46px] grow items-center justify-center gap-2 rounded-xl border px-3 text-sm font-medium transition-all duration-200 md:flex-none md:justify-start md:px-3 ${
               isActive
-                ? 'bg-blue-500/15 text-blue-600 border border-blue-400/30 shadow-sm font-semibold'
-                : 'bg-white/60 text-gray-700 border border-white/60 hover:bg-white/90 hover:text-blue-600 hover:border-white/80 shadow-sm'
+                ? 'border-white/20 bg-white/15 text-white shadow-inner shadow-white/5 font-semibold'
+                : 'border-transparent text-blue-100/70 hover:border-white/10 hover:bg-white/10 hover:text-white'
             }`}
           >
-            <LinkIcon className="w-6 shrink-0" />
+            <LinkIcon className="h-5 w-5 shrink-0" />
             <p className="hidden md:block">{link.name}</p>
           </Link>
         );

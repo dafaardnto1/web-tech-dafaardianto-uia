@@ -27,9 +27,9 @@ export default function SignOutButton() {
         type="button"
         onClick={handleSignOut}
         disabled={isSigningOut}
-        className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-xl bg-white/60 backdrop-blur-md border border-white/60 p-3 text-sm font-medium text-gray-700 hover:bg-red-50/80 hover:text-red-600 hover:border-red-200/60 shadow-sm disabled:cursor-wait disabled:opacity-70 md:flex-none md:justify-start md:p-2 md:px-3 active:scale-95 transition-all duration-200"
+        className="flex h-[46px] w-auto shrink-0 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/10 px-3 text-sm font-medium text-blue-100/80 transition-all duration-200 hover:border-red-300/20 hover:bg-red-400/10 hover:text-white disabled:cursor-wait disabled:opacity-70 md:w-full md:justify-start"
       >
-        <PowerIcon className="w-6 shrink-0" />
+        <PowerIcon className="h-5 w-5 shrink-0" />
         <span className="hidden md:block">Keluar</span>
       </button>
       {hasError && (
