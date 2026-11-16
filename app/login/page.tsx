@@ -30,7 +30,7 @@ export default function Page() {
         <Link
           href="/"
           title="Kembali ke Beranda"
-          className="w-full flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-600/90 via-blue-500/85 to-sky-500/80 backdrop-blur-xl border border-white/30 shadow-xl shadow-blue-500/15 p-4 md:h-52 md:items-end transition-all duration-200 hover:shadow-blue-500/25 active:scale-[0.99] cursor-pointer"
+          className="w-full flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-700/95 via-blue-700/90 to-sky-800/90 backdrop-blur-xl border border-white/20 shadow-xl shadow-blue-900/25 p-4 md:h-52 md:items-end transition-all duration-200 hover:shadow-blue-900/30 active:scale-[0.99] cursor-pointer"
         >
           <Image
             src="/logo/uialogo.png"
@@ -43,23 +43,23 @@ export default function Page() {
         </Link>
 
         {/* iOS Glass Login Card */}
-        <div className="my-6 md:my-10 w-full max-w-md rounded-3xl bg-white/75 backdrop-blur-2xl border border-white/60 shadow-2xl shadow-slate-200/50 p-6 sm:p-10 transition-all duration-300">
+        <div className="my-6 md:my-10 w-full max-w-md rounded-3xl bg-slate-200/85 backdrop-blur-2xl border border-white/70 shadow-2xl shadow-slate-400/40 p-6 sm:p-10 transition-all duration-300">
           <form action={formAction} className="space-y-4">
             <div className="flex-1">
-              <h1 className={`${lusitana.className} mb-4 text-2xl font-bold text-gray-900`}>
+              <h1 className={`${lusitana.className} mb-4 text-2xl font-bold text-slate-950`}>
                 Silakan Masuk dengan akun Anda.
               </h1>
               <div className="w-full space-y-4">
                 <div>
                   <label
-                    className="mb-2 block text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                    className="mb-2 block text-xs font-bold text-slate-800 uppercase tracking-wider"
                     htmlFor="email"
                   >
                     Email
                   </label>
                   <div className="relative">
                     <input
-                      className="peer block w-full rounded-xl border border-gray-200/80 py-[10px] pl-10 text-sm outline-none text-gray-900 placeholder:text-gray-400 bg-white/70 backdrop-blur-md focus:bg-white focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/15 shadow-sm transition-all"
+                      className="peer block w-full rounded-xl border border-slate-300/90 py-[10px] pl-10 text-sm font-medium outline-none text-slate-950 placeholder:text-slate-500 bg-white/85 backdrop-blur-md focus:bg-white focus:border-blue-600/90 focus:ring-4 focus:ring-blue-600/15 shadow-sm transition-all"
                       id="email"
                       type="email"
                       name="email"
@@ -71,14 +71,14 @@ export default function Page() {
                 </div>
                 <div>
                   <label
-                    className="mb-2 block text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                    className="mb-2 block text-xs font-bold text-slate-800 uppercase tracking-wider"
                     htmlFor="password"
                   >
                     Kata Sandi
                   </label>
                   <div className="relative">
                     <input
-                      className="peer block w-full rounded-xl border border-gray-200/80 py-[10px] pl-10 pr-12 text-sm outline-none text-gray-900 placeholder:text-gray-400 bg-white/70 backdrop-blur-md focus:bg-white focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/15 shadow-sm transition-all"
+                      className="peer block w-full rounded-xl border border-slate-300/90 py-[10px] pl-10 pr-12 text-sm font-medium outline-none text-slate-950 placeholder:text-slate-500 bg-white/85 backdrop-blur-md focus:bg-white focus:border-blue-600/90 focus:ring-4 focus:ring-blue-600/15 shadow-sm transition-all"
                       id="password"
                       type={showPassword ? 'text' : 'password'}
                       name="password"

@@ -9,7 +9,7 @@ export default function Page() {
     <main className="flex min-h-screen flex-col justify-between p-4 sm:p-6 overflow-y-auto">
       <div className="w-full">
         {/* iOS Glass Banner */}
-        <div className="flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-600/90 via-blue-500/85 to-sky-500/80 backdrop-blur-xl border border-white/30 shadow-xl shadow-blue-500/15 p-4 md:h-52 md:items-end">
+        <div className="flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-700/95 via-blue-700/90 to-sky-800/90 backdrop-blur-xl border border-white/20 shadow-xl shadow-blue-900/25 p-4 md:h-52 md:items-end">
           <Image
             src="/logo/uialogo.png"
             width={500}
@@ -22,11 +22,11 @@ export default function Page() {
 
         <div className="mt-6 flex grow flex-col gap-6 md:flex-row">
           {/* iOS Frosted Glass Card */}
-          <div className="flex flex-col justify-center gap-6 rounded-3xl bg-white/70 backdrop-blur-2xl border border-white/60 shadow-xl shadow-slate-200/50 px-6 py-10 md:w-2/5 md:px-16 transition-all duration-300">
-            <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
+          <div className="flex flex-col justify-center gap-6 rounded-3xl bg-slate-200/80 backdrop-blur-2xl border border-white/70 shadow-xl shadow-slate-400/40 px-6 py-10 md:w-2/5 md:px-16 transition-all duration-300">
+            <p className={`${lusitana.className} text-xl font-medium text-slate-950 md:text-3xl md:leading-normal`}>
               <strong>Selamat Datang!</strong> <br />
               Ini adalah situs web pembelajaran{' '}
-              <a href="https://nextjs.org/learn/" className="text-blue-600 hover:underline font-medium">
+              <a href="https://nextjs.org/learn/" className="text-blue-700 hover:underline font-bold">
                 Mata Kuliah Web teknologi
               </a>
               , Dosen Pengampu <b>Adhitya Ahmad Pradypta, S.Kom., M.T.I.</b>
