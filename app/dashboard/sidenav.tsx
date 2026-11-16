@@ -5,41 +5,27 @@ import SignOutButton from '@/app/ui/sign-out-button';
 
 export default function SideNav() {
   return (
-    <aside className="relative flex min-h-[112px] h-full flex-col overflow-hidden rounded-[28px] border border-white/15 bg-gradient-to-br from-slate-950 via-blue-950 to-blue-900 p-3 shadow-xl shadow-blue-950/15 sm:p-4">
-      <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-blue-400/20 blur-3xl" />
-      <div className="relative flex h-full flex-col">
+    <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <Link
-        className="mb-4 flex h-[68px] shrink-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/10 px-4 transition-colors hover:bg-white/15 md:h-[86px]"
+        className="mb-3 flex h-20 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-600/90 to-blue-500/85 backdrop-blur-xl border border-white/30 shadow-lg shadow-blue-500/20 p-4 md:h-40 md:items-end transition-all duration-200 hover:shadow-blue-500/30"
         href="/"
       >
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-1.5">
+        <div className="w-32 text-white md:w-40">
           <Image
-            src="/logo/logouiafav.png"
-            width={40}
-            height={40}
-            className="h-full w-full object-contain"
-            alt=""
+            src="/logo/uialogo.png"
+            width={300}
+            height={91}
+            className="block h-10 w-auto object-contain md:h-16"
+            alt="Banner UIA"
             priority
           />
         </div>
-        <span className="min-w-0">
-          <span className="block text-sm font-bold tracking-wide text-white">UIA</span>
-          <span className="mt-0.5 block truncate text-[10px] font-medium tracking-[0.12em] text-blue-100/70">WEB TECHNOLOGY</span>
-        </span>
       </Link>
-      <div className="flex flex-1 flex-row items-center justify-between gap-2 md:flex-col md:items-stretch md:justify-start">
-        <div className="flex min-w-0 flex-1 items-center gap-2 md:flex-col md:items-stretch">
-          <p className="hidden px-3 pb-2 pt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-blue-100/50 md:block">
-            Workspace
-          </p>
-          <nav aria-label="Navigasi dashboard" className="flex flex-1 flex-row gap-2 md:flex-col">
-            <NavLinks />
-          </nav>
-        </div>
-        <div className="hidden flex-1 md:block" />
+      <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
+        <NavLinks />
+        <div className="hidden h-auto w-full grow rounded-2xl bg-white/35 backdrop-blur-md border border-white/40 md:block"></div>
         <SignOutButton />
       </div>
-      </div>
-    </aside>
+    </div>
   );
 }
