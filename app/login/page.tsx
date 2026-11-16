@@ -30,7 +30,7 @@ export default function Page() {
         <Link
           href="/"
           title="Kembali ke Beranda"
-          className="w-full flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-700/95 via-blue-700/90 to-sky-800/90 backdrop-blur-xl border border-white/20 shadow-xl shadow-blue-900/25 p-4 md:h-52 md:items-end transition-all duration-200 hover:shadow-blue-900/30 active:scale-[0.99] cursor-pointer"
+          className="w-full flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-[#2449BD] backdrop-blur-xl border border-white/20 shadow-xl shadow-blue-900/25 p-4 md:h-52 md:items-end transition-all duration-200 hover:shadow-blue-900/30 active:scale-[0.99] cursor-pointer"
         >
           <Image
             src="/logo/uialogo.png"

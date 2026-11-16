@@ -9,7 +9,7 @@ export default function Page() {
     <main className="flex min-h-screen flex-col justify-between p-4 sm:p-6 overflow-y-auto">
       <div className="w-full">
         {/* iOS Glass Banner */}
-        <div className="flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-gradient-to-r from-blue-700/95 via-blue-700/90 to-sky-800/90 backdrop-blur-xl border border-white/20 shadow-xl shadow-blue-900/25 p-4 md:h-52 md:items-end">
+        <div className="flex h-20 shrink-0 items-center justify-start rounded-2xl md:rounded-3xl bg-[#2449BD] backdrop-blur-xl border border-white/20 shadow-xl shadow-blue-900/25 p-4 md:h-52 md:items-end">
           <Image
             src="/logo/uialogo.png"
             width={500}
